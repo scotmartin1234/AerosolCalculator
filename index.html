@@ -9,6 +9,7 @@
 <style>
 	
 body {
+	margin:0;
 	font-family: Arial;
 	color: white;
 	background-color: black;
@@ -26,6 +27,9 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 	
 li {
@@ -84,7 +88,6 @@ function myFunction {
 
 <body>
 
-<nav>
 <ul>
 	
 <li class="dropdown">
@@ -92,9 +95,9 @@ function myFunction {
 <div class="dropdown-content">
       <a class="dropbtn2">Gas</a>
       <a class="dropbtn2">Particle</a>
-      <a class="dropbtn2">Particle-Environ</a>
+      <a class="dropbtn2">Particle-Environment</a>
       <a class="dropbtn2">Particle-Gas</a>
-      <a class="dropbtn2">Particle-Gas-Environ</a>	
+      <a class="dropbtn2">Particle-Gas-Environment</a>	
 </div>
 </li>
 	
@@ -118,11 +121,8 @@ function myFunction {
 <li style="float:right;"><a href="/">About</a></li>
 	
 </ul>
-</nav>
-
-<main>
+	
 <iframe name="wolfram_object" src="https://www.wolframcloud.com/objects/user-9a32cd4b-ac8e-41b8-a00d-a9bf698ed3b0/SingleParticle/GasDensity?_embed=iframe"/>
-</main>
 	
 <footer></footer>
 
