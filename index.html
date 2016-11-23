@@ -15,6 +15,16 @@ body {
 	background-color: black;
 	}
 
+nav {
+    position: fixed;
+    top: 0;
+}
+	
+main {
+    position: fixed;
+    top: 100;
+}
+	
 iframe {
 	border: none;
 	width: 100%;
@@ -27,9 +37,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 	
 li {
@@ -88,6 +95,7 @@ function myFunction {
 
 <body>
 
+<nav>
 <ul>
 	
 <li class="dropdown">
@@ -121,8 +129,11 @@ function myFunction {
 <li style="float:right;"><a href="/">About</a></li>
 	
 </ul>
-	
+</nav>
+
+<main>
 <iframe name="wolfram_object" src="https://www.wolframcloud.com/objects/user-9a32cd4b-ac8e-41b8-a00d-a9bf698ed3b0/SingleParticle/GasDensity?_embed=iframe"/>
+</main>
 	
 <footer></footer>
 
