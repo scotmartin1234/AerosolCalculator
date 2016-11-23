@@ -32,7 +32,7 @@ li {
     float: left;
 }
 	
-li a, .dropbtn {
+li a {
     display: inline-block;
     color: white;
     text-align: center;
@@ -64,7 +64,10 @@ li.dropdown {
     text-align: left;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: blue;
+    color: white;
+}
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -81,38 +84,34 @@ function myFunction {
 
 <body>
 
-<header>
-<h1>Aerosol Calculator: Single Particle</h1>
-</header>
-
 <nav>
 <ul>
 	
 <li class="dropdown">
 <a class="dropbtn">Single Particle</a>
 <div class="dropdown-content">
-      <a href="#">Gas</a>
-      <a href="#">Particle</a>
-      <a href="#">Particle-Environ</a>
-      <a href="#">Particle-Gas</a>
-      <a href="#">Particle-Gas-Environ</a>	
+      <a class="dropbtn2">Gas</a>
+      <a class="dropbtn2">Particle</a>
+      <a class="dropbtn2">Particle-Environ</a>
+      <a class="dropbtn2">Particle-Gas</a>
+      <a class="dropbtn2">Particle-Gas-Environ</a>	
 </div>
 </li>
 	
 <li class="dropdown">
 <a class="dropbtn">Particle Population</a>
 <div class="dropdown-content">
-      <a href="#">Make</a>
-      <a href="#">Examine</a>
-      <a href="#">Act</a>
+      <a class="dropbtn2">Make</a>
+      <a class="dropbtn2">Examine</a>
+      <a class="dropbtn2">Act</a>
 </div>
 </li>
 	
 <li class="dropdown">
 <a class="dropbtn">Instrumentation</a>
 <div class="dropdown-content">
-      <a href="#">Aerosol Particle Mass Analyzer (APM)</a>
-      <a href="#">Differential Mobility Analyzer (DMA)</a>
+      <a class="dropbtn2">Aerosol Particle Mass Analyzer (APM)</a>
+      <a class="dropbtn2">Differential Mobility Analyzer (DMA)</a>
 </div>
 </li>
 	
