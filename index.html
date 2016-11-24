@@ -9,16 +9,17 @@
 <style>
 	
 body {
-	margin:0;
-	font-family: Arial;
-	color: white;
-	background-color: black;
-	}
+   margin:0;
+   font-family: Arial;
+   color: white;
+   background-color: black;
+}
 
 nav {
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: black;
     z-index: 1;
 }
 	
@@ -39,7 +40,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
 }
 	
 li {
@@ -54,12 +54,12 @@ li a {
     text-decoration: none;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
 li.dropdown {
     display: inline-block;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
 }
 
 .dropdown-content {
@@ -88,12 +88,6 @@ li.dropdown {
 }
 </style>
 
-<script>
-function myFunction {
-    document.getElementById("demo").innerHTML = "Hello JavaScript!";
-}
-</script>
-	
 </head>
 
 <body>
