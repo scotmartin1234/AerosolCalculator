@@ -1,0 +1,135 @@
+<html>
+
+<head>
+
+<title>Release Notes</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+<!-- This page is linked to from 'AerosolCalculator.jsp' and from 'SiteUseDocumentation.jsp' -->
+
+<h1>Release Notes</h1>
+
+<p>Contact for <i>AerosolCalculator</i> is Scot Martin (scot_martin@harvard.edu).</p>
+
+<h2>Version 1.0: August 25, 2008</h2>
+
+<p>First version is released. 
+
+The DMA mobility filter is implemented for nondiffusing transfer function, diffusing transfer function, 
+
+and the lognormal transfer function recently introduced by <i>Stolzenburg and McMurry</i> [2008]. 
+
+Not yet implemented are "adjust water activity," "optical properties," or "CCN properties." </p>
+
+<h2>Version 1.1: November 3, 2008</h2>
+
+<p>"Adjust water activity" is implemented. Bins can be acted upon by deliquescence, efflorescence, and hygroscopic growth. 
+
+The water activity data are taken from the Aerosol Inorganics Model (AIM) and so have high accuracy.
+
+This update allows full simulation of a hygroscopic tandem differential mobility analyzer (HTDMA).
+
+See also new utilities for adjusting water activity, e.g., predicting the hygroscopic growth factor of particles influenced by the Kelvin effect.
+
+By setting the water activity as high as 1.0, the user can directly simulate and visualize a K&ouml;hler curve.
+
+Not yet implemented are "optical properties" and "CCN properties." </p>
+
+<h2>Version 1.2: December 30, 2008</h2>
+
+<p>"CCN activation" is implemented. For an ambient supersaturation, bins can be classified and selected as CCN "activated" or "unactivated". 
+
+Two algorithms are available. The first is relatively slow but solves the full K&ouml;hler equation; 
+
+the second is much faster but is less accurate. This second algorithm uses the "&kappa;-K&ouml;hler theory" as presented by <i>Petters and Kreidenweis</i> [2007]. 
+
+Version 1.2 allows full simulation of a DMA-CCNC setup.
+
+See also a new utility for calculating the critical supersaturation of particle. 
+
+Not yet implemented are "optical properties".</p>
+
+<h2>Version 1.3: February 15, 2009</h2>
+
+<p>"Optical properties" is implemented. The light extinction of each bin is predicted using Mie calculations. 
+
+See also a new utility for calculating the optical properties of a particle in the Rayleigh, Mie, and Geometric regimes. 
+
+Version 1.3 represents the full realization of the initial vision for the website, as set out in July 2008. 
+
+Future versions will include "more actions," such as particle loss during transport in lines, a filter for passing through a cyclone or aerosol particle mass (APM) analyzer, and so forth.</p>
+
+<h2>Version 1.4: May 29, 2009</h2>
+
+<p>"Tube Tranmission Efficiencies" is implemented. The fractional transmission of each bin is predicted using diffusional losses (laminar or turbulent conditions), 
+
+gravitational settling losses (laminar or turbulent conditions), and intertial deposition losses (turbulent conditions). These processes can simulate losses in
+
+sampling lines, for example. The "tube transmission action" is accessible under "More Actions". 
+
+See also a new utility for calculating tube tranmission efficiencies. 
+
+An additional update is the option to directly read TSI export files from the Aerosol Instrument Manager to import size distributions. Use "Make Size Distribution" and then "Load a File for Distribution".</p>
+
+<h2>Version 1.5: August 1, 2009</h2>
+
+<p>Size distributions can be viewed in integral mode.</p>
+
+<p>The CCN layout is updated to allow for graphing of the CCN activation spectrum.</p>
+
+<p>The behind-the-scenes Mathematica code is "clean" and fully commented. A version 1.0 of the AerosolCalculator package is available on request. This package, used with Mathematica (www.wolfram.com), is the code behind the web-based AerosolCalculator, allowing the potential for development of specialized applications that are independent of the web-based interface.</p>
+
+<h2>Version 1.6: October 26, 2009</h2>
+
+<p>The Aerosol Particle Mass (APM) Analyzer of <i>Ehara et al.</i> [1996] is integrated into the <i>AerosolCalculator</i>. See functionality added under >MoreActions and also under >Utilities.</p>
+
+<p>Generalized interface enhancements throughout site were introduced.</p>
+
+<p>Data in plots of size distributions can be downloaded (i.e., for the making of customized plots).</p>
+
+<h2>Version 1.7: December 18, 2009</h2>
+
+<p>The infrastructure behind AerosolCalculator is upgraded from webMathematica 2.3 to webMathematica 3 and from Mathematica 5.2 to Mathematica 7. The user should not notice major front-end differences, although various back-end improvements and modifications were necessary in the upgrade.</p>
+<p>A minor addition is that Registers are now integrated with Optical Properties.</p>
+
+<h2>Version 1.8: January 30, 2010</h2>
+
+<p>The "porosity factor" &delta; is implemented.</p>
+
+<h2>Version 2.0, Beta A: "<i>AerosolCalculator: Single Particle</i>"/"<i>AerosolCalculator: Particle Population</i>": February 19, 2011</h2>
+
+<p>Major new release. The user interface is completely re-done. The <i>AerosolCalculator</i> is separated into two major parts, one devoted to a particle population (i.e., bin representation) and one given over to single-particle calculations. These are called <i>AerosolCalculator: Particle Population</i> and <i>AerosolCalculator: Single Particle</i>. Flash player technology is used in several user interface elements for dynamic updating of graphs and so forth. The underlying <i>Mathematica</i> code is also completely re-written for streamlined internal use. The <i>AerosolCalculator</i> also now includes a treatment of mixed chemical components in a particle.</p>
+
+<p>This beta version maps over approximately to "Utilities" of V1.8 of <i>AerosolCalculator</i>. See further notes and explanation under Version 2.0 below.</p>
+
+<p>Internal workings are based on webMathematica 3 and Mathematica 8.</p>
+
+<h2>Version 2.0, Beta B: May 1, 2011</h2>
+
+<p>First aspects of <i>AerosolCalculator: Particle Population</i> are implemented, including all "MAKE" functions, "EXAMINE" elements of size distribution, statistics, and registers, and "ACT" element of apply charge distribution. This version overall gives functionality for making multiple mode particle size distributions, viewing them on different types of x- and y-axes, and overlaying various distributions and viewing them as registers. (Version 2.0 of <i>AeorsolCalculator: Single Particle</i>, which is the first beyond-beta version, was released June 8, 2011. <i>AerosolCalculator: Particle Population</i> is, however, still in a beta version.)</p>
+
+<h2>Version 2.0, Beta C: May 12, 2012</h2>
+
+<p>The "ACT" elements of "Pass through an Electrostatic Precipitator" and "Pass through Tubing" are added to <i>AerosolCalculator: Particle Population.</i></p>
+
+<h2>Version 2.0, Beta D: "<i>AerosolCalculator: Instrumentation</i>": September 6, 2012</h2>
+
+<p>The "ACT" element of "Differential Mobility Analzyer" is implemented in <i>AerosolCalculator: Particle Population</i>. The new page <i>AerosolCalculator: Instrumentation</i> is introduced. The calculation of setpoint mobility for a differential mobility analzyer is implemented for the page.</p>
+
+<h2>Version 2.0, Beta E: December 5, 2012</h2>
+
+<p>The "ACT" element of "Aerosol Particle Mass Analzyer" is implemented in <i>AerosolCalculator: Particle Population</i>. The calculation of setpoint charge specific mass for an Aerosol Particle Mass Analyzer is implemented for <i>AerosolCalculator: Instrumentation</i>. The underlying technology is updated to <i>Mathematica</i>, version 9.0.</p>
+
+<h2>Financial Support</h2>
+<p>Support from the U.S. National Science Foundation is gratefully acknowledged.</p>
+
+</body>
+
+</html>
+
+
