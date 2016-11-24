@@ -45,6 +45,7 @@ ul {
 	
 li {
     float: left;
+    display: inline-block;
 }
 	
 li a {
@@ -55,10 +56,6 @@ li a {
     text-decoration: none;
 }
 
-li.dropdown {
-    display: inline-block;
-}
-
 li a:hover, .dropdown:hover .dropbtn {
     background-color: red;
 }
@@ -66,9 +63,8 @@ li a:hover, .dropdown:hover .dropbtn {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 200px;
+    background-color: lightgray;
 }
 
 .dropdown-content a {
@@ -87,6 +83,7 @@ li a:hover, .dropdown:hover .dropbtn {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 </style>
 
 </head>
@@ -124,7 +121,7 @@ li a:hover, .dropdown:hover .dropbtn {
 </div>
 </li>
 	
-<li style="float:right;"><a href="/">About</a></li>
+<li style="float:right;"><a href="http://www.cnn.com" target="wolfram_object">About</a></li>
 	
 </ul>
 </nav>
