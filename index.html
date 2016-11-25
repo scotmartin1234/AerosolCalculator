@@ -22,12 +22,77 @@ nav {
     top: 0;
     width: 100%;
     background-color: black;
-    z-index: 1;
 }
-	
+
+a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: black;
+}
+
+.list-item-level-one {
+    float: left;
+    display: inline-block;
+}
+
+.container-list-level-two {
+    position: relative;
+    display: none;
+}
+
+.list-level-two {
+    position: absolute;
+    top: 0;
+    min-width: 250px;
+    color: black;
+    background: lightgray;
+}
+
+.list-item-level-two {
+    position: relative;
+}
+
+.list-level-three {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 250px;
+    color: black;
+    background: gainsboro;
+    display: none;
+}
+
+.list-item-level-one:hover .heading-level-one {
+    background-color: red;
+}
+
+.list-item-level-one:hover .container-list-level-two {
+    display: block;
+}
+
+.list-item-level-two:hover .heading-level-two {
+    background-color: blue;
+}
+
+.list-item-level-two:hover .list-level-three {
+    display: block;
+}
+
+nav ul ul ul a:hover {
+    background-color: green;
+}
+
 main {
     padding-top: 50px;
-    z-index: 0;
 }
 	
 iframe {
@@ -36,53 +101,6 @@ iframe {
 	height: 1000px;
 	}
 	
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-	
-li {
-    float: left;
-    display: inline-block;
-}
-	
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 200px;
-    background-color: lightgray;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: blue;
-    color: white;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 
 </style>
 
@@ -91,37 +109,86 @@ li a:hover, .dropdown:hover .dropbtn {
 <body>
 
 <nav>
-<ul>
+<ul class="list-level-one">
 	
-<li class="dropdown">
-<a class="dropbtn">Single Particle</a>
-<div class="dropdown-content">
-      <a class="dropbtn2">Gas</a>
-      <a class="dropbtn2">Particle</a>
-      <a class="dropbtn2">Particle-Environment</a>
-      <a class="dropbtn2">Particle-Gas</a>
-      <a class="dropbtn2">Particle-Gas-Environment</a>	
-</div>
+<li class="list-item-level-one">
+<a class="heading-level-one">Single Particle</a>
+	<div class="container-list-level-two">
+	<ul class="list-level-two">
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Gas</a>
+        	<ul class="list-level-three">
+            	<li><a target="wolfram_object" href="https://www.wolframcloud.com/objects/user-9a32cd4b-ac8e-41b8-a00d-a9bf698ed3b0/SingleParticle/GasDensity?_embed=iframe">Density</a></li>
+                <li><a target="wolfram_object" href="https://www.wolframcloud.com/objects/user-9a32cd4b-ac8e-41b8-a00d-a9bf698ed3b0/SingleParticle/GasDiffusionCoefficient?_embed=iframe">Diffusion Coefficient</a></li>
+                <li><a>Mean Free Path</a></li>
+                <li><a>Mean Speed</a></li>
+                <li><a>Number Concentration</a></li>
+                <li><a>Pressure</a></li>
+                <li><a>Surface Collision Frequency</a></li>
+                <li><a>Viscosity</a></li>
+            </ul>
+        </li>
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Particle</a>
+        </li>
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Particle-Environment</a>
+            <ul class="list-level-three">
+                <li><a>Centripetal Force</a></li>
+                <li><a>Electric Force</a></li>
+                <li><a>Gravitational Force</a></li>
+            </ul>
+        </li>
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Particle-Gas</a>
+        </li>
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Particle-Gas-Environment</a>
+        </li>
+	</ul>
+    </div>
 </li>
 	
-<li class="dropdown">
-<a class="dropbtn">Particle Population</a>
-<div class="dropdown-content">
-      <a class="dropbtn2">Make</a>
-      <a class="dropbtn2">Examine</a>
-      <a class="dropbtn2">Act</a>
-</div>
+<li class="list-item-level-one">
+<a class="heading-level-one">Particle Population</a>
+	<div class="container-list-level-two">
+	<ul class="list-level-two">
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Make</a>
+            <ul class="list-level-three">
+                <li><a>New Distribution</a></li>
+                <li><a>Add a Mode to Current Distribution</a></li>
+                <li><a>Upload File</a></li>
+            </ul>
+        </li>
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Examine</a>
+        </li>
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Act</a>
+        </li>
+	</ul>
+    </div>
 </li>
 	
-<li class="dropdown">
-<a class="dropbtn">Instrumentation</a>
-<div class="dropdown-content">
-      <a class="dropbtn2">Aerosol Particle Mass Analyzer (APM)</a>
-      <a class="dropbtn2">Differential Mobility Analyzer (DMA)</a>
-</div>
+<li class="list-item-level-one">
+<a class="heading-level-one">Instrumentation</a>
+	<div class="container-list-level-two">
+	<ul class="list-level-two">
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Aerosol Particle Mass Analyzer (APM)
+        </a>
+        </li>
+		<li class="list-item-level-two">
+        <a class="heading-level-two">Differential Mobility Analyzer (DMA)</a>
+        </li>
+	</ul>
+    </div>
 </li>
 	
-<li style="float:right;"><a href="ReleaseNotes.html" target="wolfram_object">About</a></li>
+<li class="list-item-level-one" style="float:right;">
+<a class="heading-level-one" href="ReleaseNotes.html" target="wolfram_object">About</a>
+</li>
 	
 </ul>
 </nav>
